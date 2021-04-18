@@ -7,7 +7,7 @@ WNDPROC oWndProc;
 static HWND window = NULL;
 bool init = false; // if DEVICE9 is ok
 bool menu = false; // menu
-bool krzysiek = false; // checkbox 
+bool testbox = false; // checkbox 
 DWORD gamemodule;
 DWORD LocalPlayer;
 DWORD engine;
@@ -50,7 +50,7 @@ long __stdcall hkEndScene(LPDIRECT3DDEVICE9 o_pDevice)
         ImGui::NewFrame();
         auto flagi = ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoCollapse;
         ImGui::Begin(xorstr("ImGui Open Cheat Base by Judasz"), nullptr,flagi);
-        ImGui::Checkbox(xorstr("test checkbox"),&krzysiek);
+        ImGui::Checkbox(xorstr("test checkbox"),&testbox);
         ImGui::EndFrame();
         ImGui::Render();
         ImGui_ImplDX9_RenderDrawData(ImGui::GetDrawData());
