@@ -16,6 +16,7 @@ void ImGuiInit(LPDIRECT3DDEVICE9 pDevice)
     ImGui::CreateContext();
     ImGuiIO& io = ImGui::GetIO();
     io.Fonts->AddFontFromFileTTF(xorstr("C:\\Windows\\Fonts\\Consolas.ttf"), 20, NULL, io.Fonts->GetGlyphRangesCyrillic()); // you can change your font
+    io.ConfigFlags = ImGuiConfigFlags_NoMouseCursorChange;
     ImGui_ImplWin32_Init(window);
     ImGui_ImplDX9_Init(pDevice);
 }
